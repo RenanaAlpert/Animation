@@ -93,7 +93,7 @@ int main()
             row.Draw(canvas);
             canvas.Print(std::cout);
             ++anim; // This will perform MoveRight the first 50 times and then MoveDown 20 times
-            std::this_thread::sleep_for(std::chrono::milliseconds(50));
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
         }
     }
     _CrtDumpMemoryLeaks();

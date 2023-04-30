@@ -21,4 +21,7 @@ public:
 private:
 	Point m_leftTop;
 	Point m_rightDown;
+
 };
+
+} //experis
