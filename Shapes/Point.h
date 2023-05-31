@@ -22,6 +22,7 @@ public:
 	CoordType GetY() const { return m_y;  }
 	operator ascii::Point() const { return ascii::Point{m_x, m_y}; }
 
+
 private:
 	CoordType m_x;
 	CoordType m_y;

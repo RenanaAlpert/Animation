@@ -140,24 +140,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Animation.h" />
-    <ClInclude Include="AnimationStep.h" />
+    <ClInclude Include="AddShapeFromOutside.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Group.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Shape.h" />
+    <ClInclude Include="ShapesFile.h" />
     <ClInclude Include="Squer.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Animation.cpp" />
-    <ClCompile Include="AnimationStep.cpp" />
+    <ClCompile Include="AddShapeFromOutside.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Group.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="ShapesFile.cpp" />
     <ClCompile Include="Squer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

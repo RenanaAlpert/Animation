@@ -1,4 +1,6 @@
 #include "Group.h"
+#include <sstream>
+#include <fstream>
 
 namespace experis
 {
@@ -45,6 +47,21 @@ Group* Group::Copy() const
 {
 	Group* newGroup = new Group{*this};
 	return newGroup;
+}
+
+Shape* Group::Back()
+{
+	return this->m_group.back();
+}
+
+std::string Group::ConvertToString() const
+{
+	std::stringstream group;
+	for(const Shape* s : this->m_group)
+	{
+		group << "\n" << s->ConvertToString();
+	}
+	return group.str();
 }
 
 }

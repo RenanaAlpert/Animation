@@ -1,5 +1,6 @@
 #include "Rectangle.h"
 #include "canvas_inl.hpp"
+#include <sstream>
 
 namespace experis
 {
@@ -36,6 +37,14 @@ Rectangle* Rectangle::Copy() const
 {
 	Rectangle* newLine = new Rectangle{*this};
 	return newLine;
+}
+
+std::string Rectangle::ConvertToString() const
+{
+	std::stringstream rectangle;
+	rectangle << "Rectangle:" << this->m_leftTop.GetX() << "," << this->m_leftTop.GetY() << "," 
+		<< this->m_rightDown.GetX() << "," << this->m_rightDown.GetY() << m_bg << m_fg << m_brush;
+	return rectangle.str();
 }
 
 } // experis

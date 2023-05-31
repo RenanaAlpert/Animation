@@ -1,5 +1,6 @@
 #include "Line.h"
 #include "canvas_inl.hpp"
+#include <sstream>
 
 namespace experis
 {
@@ -29,6 +30,14 @@ Line* Line::Copy() const
 {
 	Line* newLine = new Line{*this};
 	return newLine;
+}
+
+std::string Line::ConvertToString() const
+{
+	std::stringstream line;
+	line << "Line:" << this->m_start.GetX() << "," << this->m_start.GetY() << "," 
+		<< this->m_end.GetX() << "," << this->m_end.GetY() << m_bg << m_fg << m_brush;
+	return line.str();
 }
 
 } // experis

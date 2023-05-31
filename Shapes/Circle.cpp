@@ -1,5 +1,6 @@
 #include "Circle.h"
 #include "canvas_inl.hpp"
+#include <sstream>
 
 namespace experis
 {
@@ -28,6 +29,13 @@ Circle* Circle::Copy() const
 {
 	Circle* newCircle = new Circle{*this};
 	return newCircle;
+}
+
+std::string Circle::ConvertToString() const
+{
+	std::stringstream circle;
+	circle << "Circle:" << this->m_center.GetX() << "," << this->m_center.GetY() << "," << m_radius << m_bg << m_fg << m_brush;
+	return circle.str();
 }
 
 } // experis

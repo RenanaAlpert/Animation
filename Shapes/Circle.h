@@ -17,6 +17,7 @@ public:
 	virtual void MoveBy(CoordType a_deltaX, CoordType a_deltaY) override;
 	virtual void Draw(ascii::ColoredCanvas& a_canvas) const override;
 	virtual Circle* Copy() const;
+	virtual std::string ConvertToString() const override;
 
 private:
 	Point m_center;

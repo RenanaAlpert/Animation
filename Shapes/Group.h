@@ -18,12 +18,14 @@ public:
 	virtual void MoveBy(CoordType a_deltaX, CoordType a_deltaY) override;
 	virtual void Draw(ascii::ColoredCanvas& a_canvas) const override;
 	virtual Group* Copy() const;
+	virtual std::string ConvertToString() const override;
 	template<typename shapeT>
 	void Add(CoordType a_x, CoordType a_y, size_t a_length);
 	template<typename shapeT>
 	void Add(CoordType a_x1, CoordType a_y1, CoordType a_x2, CoordType a_y2);
 	template<typename shapeT>
 	void Add(const shapeT& a_shape);
+	Shape* Back();
 
 private:
 	using Container = std::vector<Shape*>;
